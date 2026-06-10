@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Личный блог SatiArtworks — мысли, проекты и находки">
+	<title>Блог — SatiArtworks</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="functions.css">
+	<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+	<header>
+		<nav class="nav">
+    		<div class="nav_inner">
+    		  <a href="index.html" class="nav_logo">SatiArtworks</a>
+    		  <ul class="nav_links" id="nav-links">
+    		    <li><a href="index.html" class="active">Блог</a></li>
+    		    <li><a href="about.html">Обо мне</a></li>
+    		    <li><a href="prices.html">Цены</a></li>
+    		    <li><a href="works.html">Работы</a></li>
+    		  </ul>
+    		  <!-- Тёмная тема -->
+    		  <button id="theme-toggle" aria-label="Включить тёмную тему">☾</button>
+    		  <!-- Бургер (мобиль) -->
+    		  <button id="burger" aria-label="Открыть меню" aria-expanded="false">
+    		    <span></span><span></span><span></span>
+    		  </button>
+    		</div>
+  		</nav>
+	</header>
+
+	<section class="hero">
+    	<div class="container">
+      		<p class="hero_eyebrow">Личный журнал</p>
+      		<h1 class="hero_title">Мысли,<br>проекты&nbsp;&amp;<br>находки</h1>
+      		<p class="hero_subtitle">
+        		Здесь я пишу свои мысли, проекты и находки
+      		</p>
+    	</div>
+  	</section>
+
+	<main class="container">
+    <h2 class="section-title">Последние записи</h2>
+
+    <!-- Панель поиска и фильтров -->
+    <div class="filter-bar">
+      <input id="search-input" type="search" placeholder="Поиск по записям..." aria-label="Поиск по записям">
+      <button class="filter-btn active" data-tag="all">Все</button>
+      <button class="filter-btn" data-tag="Учёба">Учёба</button>
+      <button class="filter-btn" data-tag="Майндфулнес">Майндфулнес</button>
+      <button class="filter-btn" data-tag="Разное">Разное</button>
+    </div>
+    <p id="no-results">Ничего не найдено. Попробуй другой запрос.</p>
+
+    <div class="posts-list">
+        <div class="post-card">
+          <div class="post-card_num">01</div>
+          <div>
+            <div class="post-card_meta">30 мая 2026 10:45 &nbsp;·&nbsp; <span class="tag accent">Хочу завести котика</span></div>
+            <h3 class="post-card_title">Что я сегодня узнала</h3>
+            <p class="post-card_excerpt">Максим победил ии в фактах о динозаврах</p>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="post-card_num">02</div>
+          <div>
+            <div class="post-card_meta">30 мая 2026 10:48 &nbsp;·&nbsp; <span class="tag accent2">Учёба</span></div>
+            <h3 class="post-card_title">Пишу пишу пишу</h3>
+            <p class="post-card_excerpt">Выполняю задание</p>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="post-card_num">03</div>
+          <div>
+            <div class="post-card_meta">30 мая 2026 &nbsp;·&nbsp; <span class="tag">Майндфулнес</span></div>
+            <h3 class="post-card_title">Как моё настроение</h3>
+            <p class="post-card_excerpt">Нормально. Сейчас довольно скучно. Хочу гулять</p>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="post-card_num">04</div>
+          <div>
+            <div class="post-card_meta">30 мая 2026 &nbsp;·&nbsp; <span class="tag accent">Разное</span></div>
+            <h3 class="post-card_title">Когда-нибудь доделаю иллюстрацию или нет</h3>
+            <p class="post-card_excerpt">Тут надо было писать что-нибудь другое.</p>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="post-card_num">05</div>
+          <div>
+            <div class="post-card_meta">30 мая 2026 &nbsp;·&nbsp; <span class="tag">Разное</span></div>
+            <h3 class="post-card_title">Ещё один текст</h3>
+            <p class="post-card_excerpt">Текст.</p>
+          </div>
+        </div>
+    </div>
+  </main>
+
+	<footer class="footer">
+		<div class="footer_inner">
+      		<span class="footer_logo">Sati.</span>
+      		<span class="footer_copy">© 2026 — все записи мои</span>
+      		<ul class="footer_links">
+        		<li><a href="about.html">Обо мне</a></li>
+        		<li><a href="prices.html">Цены</a></li>
+        		<li><a href="works.html">Работы</a></li>
+      		</ul>
+    	</div>
+	</footer>
+
+	<!-- Кнопка наверх -->
+	<button id="scroll-top" aria-label="Наверх">↑</button>
+
+	<!-- Скрипты -->
+	<script src="functions.js"></script>
+	<script src="accessibility.js"></script>
+	<script>
+	  // Бургер-меню для мобилки
+	  var burger = document.getElementById('burger');
+	  var navLinks = document.getElementById('nav-links');
+	  if (burger) {
+	    burger.addEventListener('click', function () {
+	      var open = navLinks.classList.toggle('open');
+	      burger.classList.toggle('open', open);
+	      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+	    });
+	  }
+	</script>
+</body>
+</html>

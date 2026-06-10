@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Галерея работ SatiArtworks — иллюстрации и арты">
+	<title>Работы — SatiArtworks</title>
+	<link rel="stylesheet" href="works.css">
+	<link rel="stylesheet" href="functions.css">
+	<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+	<header>
+		<nav class="nav">
+    		<div class="nav_inner">
+    		  <a href="index.html" class="nav_logo">SatiArtworks</a>
+    		  <ul class="nav_links" id="nav-links">
+    		    <li><a href="index.html">Блог</a></li>
+    		    <li><a href="about.html">Обо мне</a></li>
+    		    <li><a href="prices.html">Цены</a></li>
+    		    <li><a href="works.html" class="active">Работы</a></li>
+    		  </ul>
+    		  <button id="theme-toggle" aria-label="Включить тёмную тему">☾</button>
+    		  <button id="burger" aria-label="Открыть меню" aria-expanded="false">
+    		    <span></span><span></span><span></span>
+    		  </button>
+    		</div>
+  		</nav>
+	</header>
+
+	<section class="hero">
+    <div class="container">
+      <p class="hero_eyebrow">Здесь вы видите мои арты</p>
+  	</div>
+  	</section>
+
+	<main class="container">
+
+    <!-- ── СЛАЙДЕР ── -->
+    <h2 class="section-title">Галерея работ</h2>
+
+    <div id="slider">
+      <div class="slider-track">
+        <div class="slide"><img src="images/01.png" alt="Арт 1"  class="gallery-img"></div>
+        <div class="slide"><img src="images/02.png" alt="Арт 2"  class="gallery-img"></div>
+        <div class="slide"><img src="images/03.png" alt="Арт 3"  class="gallery-img"></div>
+        <div class="slide"><img src="images/04.png" alt="Арт 4"  class="gallery-img"></div>
+        <div class="slide"><img src="images/05.png" alt="Арт 5"  class="gallery-img"></div>
+        <div class="slide"><img src="images/06.png" alt="Арт 6"  class="gallery-img"></div>
+        <div class="slide"><img src="images/07.png" alt="Арт 7"  class="gallery-img"></div>
+        <div class="slide"><img src="images/08.png" alt="Арт 8"  class="gallery-img"></div>
+        <div class="slide"><img src="images/09.png" alt="Арт 9"  class="gallery-img"></div>
+        <div class="slide"><img src="images/10.png" alt="Арт 10" class="gallery-img"></div>
+        <div class="slide"><img src="images/11.png" alt="Арт 11" class="gallery-img"></div>
+        <div class="slide"><img src="images/12.png" alt="Арт 12" class="gallery-img"></div>
+        <div class="slide"><img src="images/13.png" alt="Арт 13" class="gallery-img"></div>
+        <div class="slide"><img src="images/14.png" alt="Арт 14" class="gallery-img"></div>
+        <div class="slide"><img src="images/15.png" alt="Арт 15" class="gallery-img"></div>
+        <div class="slide"><img src="images/16.png" alt="Арт 16" class="gallery-img"></div>
+        <div class="slide"><img src="images/17.png" alt="Арт 17" class="gallery-img"></div>
+        <div class="slide"><img src="images/18.png" alt="Арт 18" class="gallery-img"></div>
+        <div class="slide"><img src="images/19.png" alt="Арт 19" class="gallery-img"></div>
+        <div class="slide"><img src="images/20.png" alt="Арт 20" class="gallery-img"></div>
+        <div class="slide"><img src="images/21.png" alt="Арт 21" class="gallery-img"></div>
+        <div class="slide"><img src="images/22.png" alt="Арт 22" class="gallery-img"></div>
+        <div class="slide"><img src="images/24.png" alt="Арт 24" class="gallery-img"></div>
+        <div class="slide"><img src="images/25.png" alt="Арт 25" class="gallery-img"></div>
+        <div class="slide"><img src="images/26.png" alt="Арт 26" class="gallery-img"></div>
+        <div class="slide"><img src="images/27.png" alt="Арт 27" class="gallery-img"></div>
+        <div class="slide"><img src="images/28.png" alt="Арт 28" class="gallery-img"></div>
+        <div class="slide"><img src="images/29.png" alt="Арт 29" class="gallery-img"></div>
+        <div class="slide"><img src="images/30.png" alt="Арт 30" class="gallery-img"></div>
+        <div class="slide"><img src="images/31.png" alt="Арт 31" class="gallery-img"></div>
+      </div>
+
+      <!-- Кнопки слайдера -->
+      <button class="slider-btn" id="slider-prev" aria-label="Предыдущий">‹</button>
+      <button class="slider-btn" id="slider-next" aria-label="Следующий">›</button>
+
+      <!-- Нижняя панель: счётчик + точки -->
+      <div class="slider-footer">
+        <span id="slider-counter"></span>
+        <div id="slider-dots" role="tablist" aria-label="Слайды"></div>
+      </div>
+    </div>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer_inner">
+      		<span class="footer_logo">Sati.</span>
+      		<span class="footer_copy">© 2026 — все записи мои</span>
+      		<ul class="footer_links">
+        		<li><a href="about.html">Обо мне</a></li>
+        		<li><a href="prices.html">Цены</a></li>
+        		<li><a href="works.html">Работы</a></li>
+      		</ul>
+    	</div>
+	</footer>
+
+	<button id="scroll-top" aria-label="Наверх">↑</button>
+
+	<script src="functions.js"></script>
+	<script src="slider.js"></script>
+	<script src="accessibility.js"></script>
+	<script>
+	  var burger = document.getElementById('burger');
+	  var navLinks = document.getElementById('nav-links');
+	  if (burger) {
+	    burger.addEventListener('click', function () {
+	      var open = navLinks.classList.toggle('open');
+	      burger.classList.toggle('open', open);
+	      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+	    });
+	  }
+	</script>
+</body>
+</html>

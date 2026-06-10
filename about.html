@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Обо мне — SatiArtworks, студентка и художник-иллюстратор">
+	<title>Обо мне — SatiArtworks</title>
+	<link rel="stylesheet" href="about.css">
+	<link rel="stylesheet" href="functions.css">
+	<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+	<header>
+		<nav class="nav">
+    		<div class="nav_inner">
+    		  <a href="index.html" class="nav_logo">SatiArtworks</a>
+    		  <ul class="nav_links" id="nav-links">
+    		    <li><a href="index.html">Блог</a></li>
+    		    <li><a href="about.html" class="active">Обо мне</a></li>
+    		    <li><a href="prices.html">Цены</a></li>
+    		    <li><a href="works.html">Работы</a></li>
+    		  </ul>
+    		  <button id="theme-toggle" aria-label="Включить тёмную тему">☾</button>
+    		  <button id="burger" aria-label="Открыть меню" aria-expanded="false">
+    		    <span></span><span></span><span></span>
+    		  </button>
+    		</div>
+  		</nav>
+	</header>
+
+	<section class="hero">
+    <div class="container">
+      <p class="hero_eyebrow">Кто я</p>
+      <h1 class="hero_title">Обо&nbsp;мне</h1>
+      <p class="hero_subtitle">Студент 2 курса ИСИП 24.</p>
+    </div>
+  </section>
+
+	<main class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <div class="about-photo-placeholder">
+          <img src="images/12.png" alt="Фото Сати">
+        </div>
+        <p class="about-photo-caption">Якутск 2026</p>
+      </div>
+      <div class="about-text">
+        <h2>Привет,<br>я Сати</h2>
+        <p>Моё хобби — рисование.</p>
+        <p>Этот блог — личный дневник прогресса. Здесь буду выкладывать свои арты.</p>
+        <p>Стараюсь.</p>
+        <hr class="ruled">
+        <div class="about-facts">
+          <div class="about-fact">
+            <div class="about-fact_label">Местонахождение</div>
+            <div class="about-fact_value">Якутск</div>
+          </div>
+          <div class="about-fact">
+            <div class="about-fact_label">Деятельность</div>
+            <div class="about-fact_value">Учёба + Хобби</div>
+          </div>
+          <div class="about-fact">
+            <div class="about-fact_label">Интересы</div>
+            <div class="about-fact_value">Фильмы, Сериалы</div>
+          </div>
+          <div class="about-fact">
+            <div class="about-fact_label">Читаю сейчас</div>
+            <div class="about-fact_value">Ничего</div>
+          </div>
+          <div class="about-fact">
+            <div class="about-fact_label">Кофе или чай?</div>
+            <div class="about-fact_value">Редбулл</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+	<footer class="footer">
+		<div class="footer_inner">
+      		<span class="footer_logo">Sati.</span>
+      		<span class="footer_copy">© 2026 — все записи мои</span>
+      		<ul class="footer_links">
+        		<li><a href="about.html">Обо мне</a></li>
+        		<li><a href="prices.html">Цены</a></li>
+        		<li><a href="works.html">Работы</a></li>
+      		</ul>
+    	</div>
+	</footer>
+
+	<button id="scroll-top" aria-label="Наверх">↑</button>
+
+	<script src="functions.js"></script>
+	<script src="accessibility.js"></script>
+	<script>
+	  var burger = document.getElementById('burger');
+	  var navLinks = document.getElementById('nav-links');
+	  if (burger) {
+	    burger.addEventListener('click', function () {
+	      var open = navLinks.classList.toggle('open');
+	      burger.classList.toggle('open', open);
+	      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+	    });
+	  }
+	</script>
+</body>
+</html>

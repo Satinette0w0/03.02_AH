@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Цены на иллюстрации и арты — SatiArtworks">
+	<title>Цены — SatiArtworks</title>
+	<link rel="stylesheet" href="prices.css">
+	<link rel="stylesheet" href="functions.css">
+	<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+	<header>
+		<nav class="nav">
+    		<div class="nav_inner">
+    		  <a href="index.html" class="nav_logo">SatiArtworks</a>
+    		  <ul class="nav_links" id="nav-links">
+    		    <li><a href="index.html">Блог</a></li>
+    		    <li><a href="about.html">Обо мне</a></li>
+    		    <li><a href="prices.html" class="active">Цены</a></li>
+    		    <li><a href="works.html">Работы</a></li>
+    		  </ul>
+    		  <button id="theme-toggle" aria-label="Включить тёмную тему">☾</button>
+    		  <button id="burger" aria-label="Открыть меню" aria-expanded="false">
+    		    <span></span><span></span><span></span>
+    		  </button>
+    		</div>
+  		</nav>
+	</header>
+
+	<main class="container">
+		<h1 class="page-title">Стоимость артов</h1>
+		<h1 class="page-title">Обращайтесь по этому номеру +7 962-732-60-69</h1>
+		<h1 class="page-title">Пишите в Whatsapp, Telegram</h1>
+		<div class="price-grid">
+			<div class="price-card">
+				<h3>Скетч</h3>
+				<p class="price">500 ₽</p>
+				<p class="desc">Быстрый набросок, чёрно-белый или базовый цвет</p>
+			</div>
+			<div class="price-card">
+				<h3>Иллюстрация</h3>
+				<p class="price">1 500 ₽</p>
+				<p class="desc">Детальная проработка, свет, тени, простой фон</p>
+			</div>
+			<div class="price-card">
+				<h3>Портрет</h3>
+				<p class="price">2 000 ₽</p>
+				<p class="desc">По фото или описанию, стилизация под автора</p>
+			</div>
+			<div class="price-card">
+				<h3>Обложка / Баннер</h3>
+				<p class="price">3 000 ₽</p>
+				<p class="desc">Для книг, YouTube, Twitch, соцсетей (включает PSD)</p>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer_inner">
+      		<span class="footer_logo">Sati.</span>
+      		<span class="footer_copy">© 2026 — все записи мои</span>
+			<ul class="footer_links">
+				<li><a href="about.html">Обо мне</a></li>
+				<li><a href="prices.html">Цены</a></li>
+				<li><a href="works.html">Работы</a></li>
+			</ul>
+    	</div>
+	</footer>
+
+	<button id="scroll-top" aria-label="Наверх">↑</button>
+
+	<script src="functions.js"></script>
+	<script src="accessibility.js"></script>
+	<script>
+	  var burger = document.getElementById('burger');
+	  var navLinks = document.getElementById('nav-links');
+	  if (burger) {
+	    burger.addEventListener('click', function () {
+	      var open = navLinks.classList.toggle('open');
+	      burger.classList.toggle('open', open);
+	      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+	    });
+	  }
+	</script>
+</body>
+</html>
